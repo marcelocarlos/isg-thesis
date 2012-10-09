@@ -1,33 +1,44 @@
 \chapter{Introduction}\label{Introduction_chapter}
 
-\incomment{We first give general introduction ...}
+The isg-thesis class also includes some commands. The command \textbf{\textbackslash{comment}} allows multi-line comments. For example:
 
-Maecenas laoreet lorem pretium sem pellentesque luctus. Nulla pulvinar iaculis laoreet. Praesent vitae ultricies neque. Praesent sit amet sapien lacus. Donec sit amet risus odio. In laoreet dui ut eros vehicula eu faucibus leo lobortis. Maecenas tincidunt erat ac felis lacinia eleifend. Mauris urna massa, auctor a bibendum eu, ultrices eget erat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse dictum viverra turpis, dictum vehicula est tempor et. Aenean fringilla, mi eget porta pulvinar, ac sagittis urna libero eget purus.
+\begin{lstlisting}[frame=single,
+					frameround=tttt,
+					rulecolor=\color{black},
+					language=TeX,
+					basicstyle=\small,
+					backgroundcolor=\color{black!10},
+					numbers=left,
+					numberstyle=\small\color{gray},
+					xleftmargin=50pt,
+					xrightmargin=50pt,
+					framextopmargin=2pt,
+					framexrightmargin=3pt,
+					framexleftmargin=3pt,
+					framexbottommargin=2pt,
+				]
+\comment{
+    multi-line
+    commented
+    
+    text
+}
+\end{lstlisting}
+
+There are also 4 commands to assist the reviewing process. The \textbf{\textbackslash{revcomment}} inserts a new line in the document with a red font colour. For example, the comand \textbf{\textbackslash{revcomment}\{my comment here\}}produces:
+
+\revcomment{my comment here}
+
+For inline comments, there is the command \textbf{\textbackslash{incomment}}, which produces a highlighted text (in red) in between square brackets. For example, \incomment{this small comment} was produced using the \textbf{\textbackslash{incomment}} command.
+
+The last two commands are \textbf{\textbackslash{rmtext}} and \textbf{\textbackslash{newtext}} produce a \rmtext{strikethroughed} and a \newtext{highlighted} text, respectively. These are intended to be used to indicate portions of text removed during the review or newly added content.
+
+All these commands support customised colours. You just need to indicate the desired colour as an option. For example, by passing blue as a option \textbf{\textbackslash{rmtext}$[$blue$]$\{text\}}, we will produce: \rmtext[blue]{text}.
 
 \section{Contributions}
-
-\incomment{We state our contributions here ..}
 
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi a mi ut eros pulvinar mollis eget sed enim. Donec at arcu quis libero ultricies dignissim. Morbi suscipit suscipit purus, quis venenatis turpis suscipit ut. Cras libero augue, viverra non molestie in, laoreet at risus. Donec semper nunc ut quam aliquam tincidunt ultricies lorem lacinia. Aliquam in urna magna. Etiam ultricies lectus pharetra quam imperdiet lobortis. Donec risus nulla, euismod eget ullamcorper at, consequat id velit. Curabitur sollicitudin tellus quis quam laoreet semper. Fusce ac orci eget diam gravida sodales nec in nunc. Aliquam erat volutpat. Nullam eu ipsum ut ante vulputate rhoncus congue sed enim.
 
 \section{Thesis Outline}
-
-\incomment{This thesis is organised as follows ...}
-
-Donec hendrerit nisi commodo massa semper sed adipiscing velit interdum. Nullam sagittis venenatis enim eu feugiat. Proin quis lacus nec eros pellentesque bibendum. Vivamus consectetur, velit non euismod feugiat, lacus urna fermentum felis, sit amet malesuada lectus augue quis metus. Maecenas elit ipsum, commodo ac condimentum a, pulvinar sed elit. Praesent at ante metus. Donec adipiscing ligula sit amet turpis aliquet ultrices. Aliquam vitae velit eu nisi aliquet interdum non quis sem. Curabitur in ante sed lectus volutpat faucibus interdum at diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna dui, accumsan at commodo vitae, congue id sem. Maecenas sollicitudin fermentum suscipit. Ut in sem in sapien volutpat venenatis et ac elit. Nulla et sem vitae est condimentum ultrices sed ac risus.
-
-\incomment{We first give general introduction ...}
-
-Maecenas laoreet lorem pretium sem pellentesque luctus. Nulla pulvinar iaculis laoreet. Praesent vitae ultricies neque. Praesent sit amet sapien lacus. Donec sit amet risus odio. In laoreet dui ut eros vehicula eu faucibus leo lobortis. Maecenas tincidunt erat ac felis lacinia eleifend. Mauris urna massa, auctor a bibendum eu, ultrices eget erat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse dictum viverra turpis, dictum vehicula est tempor et. Aenean fringilla, mi eget porta pulvinar, ac sagittis urna libero eget purus.
-
-\section{Contributions}
-
-\incomment{We state our contributions here ..}
-
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi a mi ut eros pulvinar mollis eget sed enim. Donec at arcu quis libero ultricies dignissim. Morbi suscipit suscipit purus, quis venenatis turpis suscipit ut. Cras libero augue, viverra non molestie in, laoreet at risus. Donec semper nunc ut quam aliquam tincidunt ultricies lorem lacinia. Aliquam in urna magna. Etiam ultricies lectus pharetra quam imperdiet lobortis. Donec risus nulla, euismod eget ullamcorper at, consequat id velit. Curabitur sollicitudin tellus quis quam laoreet semper. Fusce ac orci eget diam gravida sodales nec in nunc. Aliquam erat volutpat. Nullam eu ipsum ut ante vulputate rhoncus congue sed enim.
-
-\section{Thesis Outline}
-
-\incomment{This thesis is organised as follows ...}
 
 Donec hendrerit nisi commodo massa semper sed adipiscing velit interdum. Nullam sagittis venenatis enim eu feugiat. Proin quis lacus nec eros pellentesque bibendum. Vivamus consectetur, velit non euismod feugiat, lacus urna fermentum felis, sit amet malesuada lectus augue quis metus. Maecenas elit ipsum, commodo ac condimentum a, pulvinar sed elit. Praesent at ante metus. Donec adipiscing ligula sit amet turpis aliquet ultrices. Aliquam vitae velit eu nisi aliquet interdum non quis sem. Curabitur in ante sed lectus volutpat faucibus interdum at diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer urna dui, accumsan at commodo vitae, congue id sem. Maecenas sollicitudin fermentum suscipit. Ut in sem in sapien volutpat venenatis et ac elit. Nulla et sem vitae est condimentum ultrices sed ac risus.

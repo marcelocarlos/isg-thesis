@@ -20,6 +20,7 @@
 \RequirePackage[svgnames]{xcolor}   % colour extensions (adding svgnames support)
 \RequirePackage[breaklinks,pagebackref,bookmarks]{hyperref}           % hyperlinks in cross references
 \RequirePackage[normalem]{ulem}     % strikethrough
+\usepackage{soul}
 \RequirePackage{graphicx}
 \RequirePackage{eso-pic}
 \RequirePackage{type1cm}
@@ -31,7 +32,11 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+
 \usepackage{amsfonts}           % fonts from the American Mathematical Society. 
+
+\usepackage{verbatim}
+\usepackage{listings}
 
 %----------------------------------------------------
 % Package settings
@@ -113,8 +118,8 @@
 \newcommand{\incomment}[2][red] {{\color{#1}{[#2]}}}  
 % strikethroughed text to highlight removed portions of a text during the review
 \newcommand{\rmtext}[2][olive] {{\color{#1}{\sout{[#2]}}}}  
-% produces a 'LightSeaGreen' text to highlight portions of text
-\newcommand{\newtext}[2][LightSeaGreen] {{\color{#1}{\textit{#2}}}}  
+% highlights a portion of text
+\newcommand{\newtext}[2][GreenYellow] {\sethlcolor{#1}\hl{\textit{#2}}}  
 
 %----------------------------------------------------
 % Title Page
