@@ -1,0 +1,133 @@
+%-----------------------------------------------------------------------
+% Example of use of the isg-thesis LaTeX class
+% 
+% Created by Marcelo Carlomagno Carlos <contact@marcelocarlos.com>
+% Based on a version created by Saif Al-Kuwari <Saif.Alkuwari.2008@live.rhul.ac.uk>
+% 
+% website: https://github.com/marcelocarlosbr/isg-thesis
+%-----------------------------------------------------------------------
+
+% parameters available: 
+%   - pdf: to generate pdf links
+%   - watermark: to insert a 'Draft' watermark to every page of the pdf
+%	- noheader: hide headers
+%	- nofooterrule: hide footer rule
+% This class also provides the additional commands (to be used anywhere
+% in the document:
+%   - \comment -> allows multi-line comments
+%   - \revcomment -> inserts a red text in a new line
+%   - \incomment -> inserts a red text inline
+%   - \rmtext -> strikethroughs a portion of text
+%   - \newtext -> highlights text
+\documentclass[pdf,watermark]{isg-thesis}
+
+%----------------------------------------------------------
+% Macro for individual chapter printing
+% Set it to 0 to generate the full thesis
+% Set it to 1 to hide the cover, toc, etc 
+%----------------------------------------------------------
+\def\chapterPrinting{0}
+%----------------------------------------------------------
+
+%----------------------------------------------------------
+% Thesis and author's details
+%----------------------------------------------------------
+\degree{Doctor of Philosophy}
+\author{Author's Name}
+\title{The Title of The Thesis}
+\degreeyear{2013} 
+
+%----------------------------------------------------------
+% Beginning of the document
+%----------------------------------------------------------
+\begin{document}
+%----------------------------------------------------------
+% Conditional macro for individual chapter printing
+% DO NOT DELETE IT
+%----------------------------------------------------------
+\ifnum\chapterPrinting=0
+%----------------------------------------------------------
+
+%----------------------------------------------------------
+% Title page and declaration
+%----------------------------------------------------------
+\maketitle
+\declaration
+
+%----------------------------------------------------------
+% Dedication
+%----------------------------------------------------------
+\begin{dedication}
+Dedication ...
+\end{dedication}
+
+%----------------------------------------------------------
+% Acknowledgement
+%----------------------------------------------------------
+\begin{acknowledgement}
+Acknowledgement ...
+\end{acknowledgement}
+
+%----------------------------------------------------------
+% Abstract
+%----------------------------------------------------------
+\begin{abstract}
+Abstract of the thesis. According to RHUL regulations, 
+the abstract should not be more than 300 words.
+\end{abstract}
+
+%----------------------------------------------------------
+% Table of Contents, List of Figures and Tables
+%----------------------------------------------------------
+\tableofcontents 
+\listoffigures \clearpage
+\listoftables \clearpage
+
+%----------------------------------------------------------
+% List of Notations
+%----------------------------------------------------------
+\chapter*{List of Notations}
+\input{tex/list-notation}
+\clearpage
+
+%----------------------------------------------------------
+% List of Abbreviations
+%----------------------------------------------------------
+\chapter*{List of Abbreviations}
+\input{tex/list-abbreviations}
+\clearpage
+
+%----------------------------------------------------------
+% END OF Conditional macro for individual chapter printing
+% DO NOT DELETE IT
+%----------------------------------------------------------
+\fi
+%----------------------------------------------------------
+
+%----------------------------------------------------------
+% Introduction
+%----------------------------------------------------------
+\input{tex/introduction}
+
+%----------------------------------------------------------
+% Background
+%----------------------------------------------------------
+\part{Background}
+\input{tex/background}
+
+%----------------------------------------------------------
+% Bibliography
+%----------------------------------------------------------
+\pagestyle{plain}
+\bibliographystyle{abbrv}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{bib/references}
+
+%----------------------------------------------------------
+% Appendix, if needed
+%----------------------------------------------------------
+%\begin{appendix}
+%  \input{appendix/appendix01}
+%\end{appendix}
+
+\end{document}
