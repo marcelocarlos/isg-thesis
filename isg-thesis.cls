@@ -14,7 +14,7 @@
 %----------------------------------------------------
 % Required Packages
 %----------------------------------------------------
-\RequirePackage[american]{babel} 
+\RequirePackage[english]{babel} 
 \RequirePackage{setspace}
 \RequirePackage{color}              % coloured text and background
 \RequirePackage[svgnames]{xcolor}   % colour extensions (adding svgnames support)
@@ -194,7 +194,7 @@
 %----------------------------------------------------
 \ifheader
   % reduce the font size for page numbers
-  \renewcommand*{\thepage}{\small\arabic{page}}
+%  \renewcommand*{\thepage}{\small\arabic{page}}
   % custom header package
   \pagestyle{fancy}
   % defining header
@@ -202,8 +202,6 @@
   \fancyhead[LO,RE]{\slshape \small{\nouppercase{\leftmark}}}
   \renewcommand{\headrulewidth}{.01pt}
   % defining footer
-  \iffooterrule
-    \fancyfoot[C]{\small{\thepage}}
-    \renewcommand{\footrulewidth}{.1pt}
-  \fi
+  \fancyfoot[C]{\small{\thepage}}
+  \renewcommand{\footrulewidth}{.1pt}  
 \fi
