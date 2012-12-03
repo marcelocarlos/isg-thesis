@@ -111,7 +111,7 @@
 % this command will produce the titles for abstract, acknowledgments and dedication
 \newcommand{\titleenvironment}[1]{{\begin{center}\bf{\Large\noindent#1\vspace{.8cm}}\end{center}}}
 % multi-line comments
-\newcommand{\comment}[1]{}  
+\newcommand{\multicomment}[1]{}  
 % centralised note in a new line for review
 \newcommand{\revcomment}[2][red] {\begin{center}{\color{#1}{[#2]}}\end{center}}  
 % inline note for review
