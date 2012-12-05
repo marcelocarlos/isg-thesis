@@ -193,15 +193,15 @@
 % Header and Footer
 %----------------------------------------------------
 \ifheader
-  % reduce the font size for page numbers
-%  \renewcommand*{\thepage}{\small\arabic{page}}
   % custom header package
   \pagestyle{fancy}
   % defining header
-  \fancyhead[LE,RO]{\slshape \small{\nouppercase{\rightmark}}}
-  \fancyhead[LO,RE]{\slshape \small{\nouppercase{\leftmark}}}
+  \fancyhead[R]{\slshape \small{\nouppercase{\rightmark}}}
+  \fancyhead[L]{\slshape \small{\nouppercase{\leftmark}}}  
+  %\fancyhead[LE,RO]{\slshape \small{\nouppercase{\rightmark}}} % this works only if the class has the option twoside
+  %\fancyhead[LO,RE]{\slshape \small{\nouppercase{\leftmark}}} % this works only if the class has the option 
   \renewcommand{\headrulewidth}{.01pt}
   % defining footer
-  \fancyfoot[C]{\small{\thepage}}
-  \renewcommand{\footrulewidth}{.1pt}  
+  \fancyfoot[C]{\thepage}
+  %\renewcommand{\footrulewidth}{.1pt}  % draw a line splitting the footer and the contents
 \fi
