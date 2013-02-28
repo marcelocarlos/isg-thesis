@@ -32,6 +32,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{minitoc}
 
 \usepackage{amsfonts}           % fonts from the American Mathematical Society. 
 

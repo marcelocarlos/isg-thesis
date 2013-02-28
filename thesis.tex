@@ -24,7 +24,7 @@
 %----------------------------------------------------------
 % Macro for individual chapter printing
 % Set it to 0 to generate the full thesis
-% Set it to 1 to hide the cover, toc, etc 
+% Set it to 1 to hide the cover, toc, etc - after that, just comment the chapters you want to hide, including appendices 
 %----------------------------------------------------------
 \def\chapterPrinting{0}
 %----------------------------------------------------------
@@ -79,6 +79,8 @@ the abstract should not be more than 300 words.
 %----------------------------------------------------------
 % Table of Contents, List of Figures and Tables
 %----------------------------------------------------------
+\dominitoc % comment this line if you don't want to have TOCs in every chapter
+\doparttoc % comment this line if you don't want to have TOCs in every chapter
 \tableofcontents 
 \listoffigures \clearpage
 \listoftables \clearpage
@@ -107,6 +109,7 @@ the abstract should not be more than 300 words.
 %----------------------------------------------------------
 % Introduction
 %----------------------------------------------------------
+\part{Introduction}
 \input{tex/introduction}
 
 %----------------------------------------------------------
@@ -114,6 +117,18 @@ the abstract should not be more than 300 words.
 %----------------------------------------------------------
 \part{Background}
 \input{tex/background}
+
+%----------------------------------------------------------
+% Contribution
+%----------------------------------------------------------
+\part{Contribution}
+\input{tex/contribution}
+
+%----------------------------------------------------------
+% Conclusions
+%----------------------------------------------------------
+\part{Conclusions}
+\input{tex/conclusions}
 
 %----------------------------------------------------------
 % Bibliography
@@ -124,10 +139,10 @@ the abstract should not be more than 300 words.
 \bibliography{bib/references}
 
 %----------------------------------------------------------
-% Appendix, if needed
+% Appendices, if needed
 %----------------------------------------------------------
-%\begin{appendix}
-%  \input{appendix/appendix01}
-%\end{appendix}
+\begin{appendix}
+  \input{appendices/appendix01}
+\end{appendix}
 
 \end{document}
