@@ -42,6 +42,12 @@ The last two commands are \textbf{\textbackslash{rmtext}} and \textbf{\textbacks
 
 All these commands support customised colours. You just need to indicate the desired colour as an option. For example, by passing blue as a option \textbf{\textbackslash{rmtext}$[$blue$]$\{text\}}, we will produce: \rmtext[blue]{text}.
 
+This class also provides support to the command \textbf{\textbackslash{todo}} to produce a todo note (provided by the packed \textit{todonotes}. For example, when using the command \textbf{\textbackslash{todo}\{text\}}, in the text, it produces this note \todo{Here is a note} we are seeing. If you want an inline note, just add the option ``inline'' (e.g. \textbf{\textbackslash{todo}[inline]\{text\}}). Another useful command that this package provides is the \textbf{\textbackslash{missingfigure}} which render a figure like this:
+
+\begin{center}
+\missingfigure[figwidth=8cm]{Make a figure here}
+\end{center}
+
 %----------------------------------------------------------
 % Contributions
 %----------------------------------------------------------

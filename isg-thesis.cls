@@ -25,6 +25,7 @@
 \RequirePackage{eso-pic}
 \RequirePackage{type1cm}
 \RequirePackage{fancyhdr}
+\RequirePackage{todonotes}
 
 %----------------------------------------------------
 % Other Packages
